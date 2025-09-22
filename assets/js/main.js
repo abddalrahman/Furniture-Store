@@ -442,7 +442,7 @@ function fill_products(fill_ele, prods, cout, is_swip){
 		prods.forEach(function(product){
 			let addition_class = '';
 			let id = product.id.toString();
-			if(all_wish_prod.includes(id)){addition_class='added';}
+			if(all_wish_prod && all_wish_prod.includes(id)){addition_class='added';}
 			let new_tag = product.tags.length > 0 ? `<a class="mb-2 px-4 py-1 rounded-2 new-btn" href="shop.html?cat=new">NEW</a>` : '';
 			let discount = product.discount != null ? '<span class="px-4 py-1 rounded-2 disc-btn">-50%</span>' : '';
 			let rate = '<i class="fa-solid fa-star mx-1"></i>'.repeat(product.rating);

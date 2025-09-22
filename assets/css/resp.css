@@ -1,0 +1,101 @@
+:root {
+	/* backgrounds */
+	--main-background-color: #ffffff;
+	--second-background-color: #F3F5F7;
+	/* colors */
+	--main-dark-text-color: #141718;
+	--main-light-text-color: #6C7275;
+	--sec-text-color: #38CB89;
+	--disaple-color: #B1B5C3;
+	--light-color: #ffffff;
+	--dark-color: #000000;
+	--v-rare-color: #377DFF;
+	--stars-color: #343839;
+	--blue-black-color: #23262F;
+	--input-border: #CBCBCB;
+	/* border color */
+	--border-color: #E8ECEF;
+}
+
+/* home page--------------------------------------------- */
+@media screen and (max-width: 575px) {
+	/* header section------------- */
+	.new-arriv-swip{
+		padding-right: 100px;
+	}
+}
+
+@media screen and (max-width: 991px) {
+	/*footer  */
+	footer .logo-footer::before{
+		opacity: 1;
+	}
+}
+/* shop page--------------------------------------------- */
+@media screen and (max-width: 765px) {
+	.controle-sec{
+		border-block: 1px solid var(--border-color);
+	}
+	.controle-sec.tow_now .cat-select-ele > div{
+		width: 100% !important;
+	}
+	.controle-sec.tow_now .sorting-display{
+		margin-top: 10px;
+		padding-block: 8px;
+		border-block: 1px solid var(--border-color);
+		width: 100%;
+		justify-content: space-between !important;
+	}
+}
+/* cart page--------------------------------------------- */
+@media screen and (min-width: 991px) {
+	/* delivery info section-------------------  */
+	.delivery-info{
+		margin-inline: -8px !important;
+	}	
+}
+@media screen and (max-width: 765px) {
+	/*complete-pay section---------------------------  */
+	.complete-pay ul li > span:first-child{
+		width: 100px;
+	}
+}
+@media screen and (max-width: 575px) {
+	/*complete-pay section---------------------------  */
+	.complete-pay ul{
+		width: 100%;
+	}
+	.complete-pay ul li{
+		border-bottom: 1px solid var(--border-color);
+	}
+}
+
+/* Profile page--------------------------------------------- */
+@media screen and (max-width: 991px) {
+	.tap-wishlist ul li > div:last-of-type span{
+		width: 100%;
+	}
+}
+/* blog page--------------------------------------------- */
+@media screen and (max-width: 765px) {
+	.a-prod,
+	.a-prod.just-tow{
+		width: calc(100% / 2 - 12px);
+	}
+}
+@media screen and (max-width: 575px) {
+	.controle > div:first-of-type{
+		width: 100%;
+	}
+	.a-prod,
+	.a-prod.just-tow{
+		width: calc(100%);
+	}
+}
+/* articale page--------------------------------------------- */
+
+@media screen and (max-width: 575px) {
+	.mid-articale > div.img-con{
+		width: 100%;
+	}
+}

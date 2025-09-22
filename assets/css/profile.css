@@ -1,0 +1,230 @@
+:root {
+	/* backgrounds */
+	--main-background-color: #ffffff;
+	--second-background-color: #F3F5F7;
+	/* colors */
+	--main-dark-text-color: #141718;
+	--main-light-text-color: #6C7275;
+	--sec-text-color: #38CB89;
+	--disaple-color: #B1B5C3;
+	--light-color: #ffffff;
+	--dark-color: #000000;
+	--v-rare-color: #377DFF;
+	--stars-color: #343839;
+	--blue-black-color: #23262F;
+	--input-border: #CBCBCB;
+	--note-color:#807E7E;
+	/* border color */
+	--border-color: #E8ECEF;
+	/* fonts */
+	--v-s-fonts: 12px;
+	--sm-fonts: 14px;
+	--main-fonts: 16px;
+	--md-vs-fonts: 18px;
+	--md-s-fonts: 20px;
+	--md-fonts: 24px;
+	--lg-fonts: 30px;
+	--xl-fonts: 40px;
+	--xxl-fonts: 54px;
+	--xxxl-fonts: 72px;
+	/* transition */
+	--main-transition: all 0.2s;
+}
+
+/*media for fonts var  */
+@media screen and (max-width: 1200px) {
+	:root {
+		--main-fonts: 15px;
+		--v-s-fonts: 12px;
+		--sm-fonts:14px;
+		--md-s-fonts: 18px;
+		--md-vs-fonts: 16px;
+		--md-fonts:20px;
+		--lg-fonts:28px;
+		--xl-fonts: 38px;
+		--xxl-fonts : 48px;
+		--xxxl-fonts : 60px;
+	}
+}
+@media screen and (max-width: 991px) {
+	:root {
+		--main-fonts: 14px;
+		--v-s-fonts: 12px;
+		--sm-fonts:12px;
+		--md-vs-fonts: 14px;
+		--md-s-fonts: 16px;
+		--md-fonts:18px;
+		--lg-fonts:26px;
+		--xl-fonts: 34px;
+		--xxl-fonts : 40px;
+		--xxxl-fonts : 50px;
+	}
+}
+@media screen and (max-width: 766px) {
+	:root {
+		--main-fonts: 12px;
+		--v-s-fonts: 10px;
+		--sm-fonts:10px;
+		--md-fonts:16px;
+		--md-vs-fonts: 12px;
+			--md-s-fonts: 14px;
+			--lg-fonts:24px;
+			--xl-fonts: 30px;
+			--xxl-fonts : 34px;
+			--xxxl-fonts : 40px;
+    }
+}
+.account-taps{
+	height: fit-content;
+	background-color: var(--second-background-color);
+}
+.account-taps .avatar-container span{
+	bottom: 0px;
+	left: calc(100% - 30px);
+	width: 30px;
+	height: 30px;
+	background-color: var(--main-dark-text-color);
+	border: 2px solid var(--light-color);
+	cursor: pointer;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	-o-border-radius: 50%;
+}
+.account-taps .account-taps-head h3{
+	font-size: var(--md-s-fonts);
+	color: var(--dark-color);
+}
+.account-taps .account-taps-body ul li{
+	cursor: pointer;
+	font-size: var(--main-fonts);
+	color: var(--main-light-text-color);
+	font-weight: 600;
+	transition: var(--main-transition);
+	-webkit-transition: var(--main-transition);
+	-moz-transition: var(--main-transition);
+	-ms-transition: var(--main-transition);
+	-o-transition: var(--main-transition);
+}
+.account-taps .account-taps-body ul li.active{
+	color: var(--main-dark-text-color);
+	border-bottom: 1px solid var(--main-dark-text-color);
+}
+.account-taps .account-taps-body ul li:hover{
+	padding-inline-start: 10px;
+	color: var(--main-dark-text-color);
+}
+.account-taps .account-taps-body select{
+	width: 100%;
+	border: 2px solid var(--main-light-text-color);
+	font-size: var(--main-fonts);
+	cursor: pointer;
+	font-weight: 600;
+}
+/* account-details sec ------------------ */
+.account-details h3,
+.chang-pass h3{
+	font-size: var(--md-s-fonts);
+	font-weight: 500;
+	color: var(--dark-color);
+}
+.account-details label,
+.chang-pass label{
+	font-size: var(--v-s-fonts);
+	font-weight: 700;
+	color: var(--main-light-text-color);
+	text-transform: uppercase;
+}
+.account-details input,
+.chang-pass input{
+	border: 1px solid var(--input-border);
+	font-size: var(--main-fonts);
+	color: var(--main-light-text-color);
+	background-color: var(--light-color);
+}
+.account-details .note{
+	color: var(--note-color);
+	font-size: var(--v-s-fonts);
+	font-style: italic;
+}
+.taps-content .tap-account > a{
+	width: fit-content;
+}
+/* address sec ------------------ */
+.tap-address h2,
+.tap-orders h2,
+.tap-wishlist h2{
+	font-size: var(--md-s-fonts);
+	flex-wrap: 600;
+	color: var(--dark-color);
+}
+.biling-addr,
+.shipping-addr{	
+	border: 1px solid var(--main-light-text-color);
+	color: var(--dark-color);
+	min-width: 300px;
+}
+.biling-addr h4,
+.shipping-addr h4{
+	font-size: var(--main-fonts);
+	font-weight: 600;
+}	
+.biling-addr >div span ,
+.shipping-addr >div span{
+	cursor: pointer;
+	font-size: var(--main-fonts);
+	color: var(--main-light-text-color);
+	font-weight: 600;
+}
+.biling-addr > span ,
+.shipping-addr > span{
+	font-size: var(--sm-fonts);
+	font-weight: 300;
+}
+/* tap-orders sec ----------------------- */
+.tap-orders > ul > li{
+	border-bottom: 1px solid var(--border-color);
+	font-size: var(--sm-fonts);
+	color: var(--main-dark-text-color);
+}
+.tap-orders > ul > li:first-of-type{
+	color: var(--main-light-text-color);
+}
+.tap-orders > ul > li ul li:first-of-type{
+	color: var(--main-light-text-color);
+	width: 40%;
+}
+.tap-orders > ul > li ul li{
+	text-overflow: ellipsis;
+  overflow: hidden;
+}
+/* tap-wishlist sec---------------------- */
+.tap-wishlist ul li {
+	border-bottom: 1px solid var(--border-color);
+}
+.tap-wishlist ul li > div:first-of-type > img{
+	width: 80px;
+}
+.tap-wishlist ul li > div:first-of-type > span{
+	color: var(--main-light-text-color);
+	cursor: pointer;
+}
+.tap-wishlist ul li > div:first-of-type > div h5,
+.tap-wishlist ul li > div:first-of-type > div{
+	font-size: var(--sm-fonts);
+	color: var(--main-dark-text-color);
+}
+.tap-wishlist ul li > div:first-of-type > div h5{
+	font-weight: 600;
+}
+.tap-wishlist ul li > div:first-of-type > div span:first-of-type{
+	color: var(--main-light-text-color);
+}
+.tap-wishlist ul li > div:last-of-type span{
+	width: fit-content;
+}	
+.tap-wishlist ul li > div.price-cont{
+	font-size: var(--sm-fonts);
+	color: var(--main-dark-text-color);
+}

@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>3legant - Cart</title>
+	<!-- icons cdn -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+	<!-- swiper cdn -->
+	<link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+	<!-- fonts cdn -->
+	<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+	<!-- bootstrap cdn -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
+	integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+	<!-- my css -->
+	<link rel="stylesheet" href="assets/css/main.css">
+	<link rel="stylesheet" href="assets/css/cart.css">
+	<link rel="stylesheet" href="assets/css/resp.css">
+
+</head>
+<body>
+	<header>
+		<div class="alert alert-dismissible fade show d-flex justify-content-center align-items-center alert-top mb-0" role="alert">
+			<img src="assets/images/proj_2/discount_top.svg" alt="discount icon">
+			<span class="mx-3">30% off storewide — Limited time!</span>
+			<a class="d-sm-flex d-none justify-content-center align-items-center" href="#">Shop Now <span class="material-symbols-outlined ms-2">arrow_right_alt</span></a> 
+			<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+		</div>
+		
+		<div class="cover d-none position-fixed"></div>
+		<aside class="nav-aside position-fixed p-4 d-flex flex-column">
+			<div class="title-close d-flex align-items-center justify-content-between ">
+				<span>3legant.</span>
+				<span class="material-symbols-outlined close-icon ms-2">close</span>
+			</div>
+			<div class="search-box-2 d-flex align-items-center my-4 px-3 p-1 rounded-2">
+				<a class="" href="#">
+					<img src="assets/images/proj_2/search_icon.svg" alt="search_icon">
+				</a>
+				<input class="form-control me-2 border-0" placeholder="Search" type="search" required aria-label="Search">
+			</div>
+
+			<ul class="p-0">
+				<li class="py-3"><a href="index.html">Home</a></li>
+				<li class="py-3"><a href="shop.html">Shop</a></li>
+				<li class="py-3"><a href="blog.html">Blog</a></li>
+				<li class="py-3"><a href="contact.html">Contact Us</a></li>
+			</ul>
+
+			<div class="aside-footer mt-auto">
+				<ul class="p-0">
+					<li>
+						<a href="cart.html" class="py-3 d-flex justify-content-between align-items-center">
+							<span>Cart</span> 
+							<span class="my-badge position-relative mx-4">
+								<img src="assets/images/proj_2/card_icon.svg" alt="card_icon">
+								<span class="position-absolute rounded-circle d-flex align-items-center justify-content-center f-inter">0</span>
+							</span>
+						</a>
+					</li>
+					<li>
+						<a href="profile.html" class="py-3 d-flex justify-content-between align-items-center">
+							<span>Profile</span> 
+							<span class="material-symbols-outlined mx-4">account_circle</span>
+						</a>
+					</li>
+				</ul>
+				<div class="social-icons">
+					<a href="#">
+						<i class="fa-brands fa-instagram"></i>
+					</a>
+					<a class="mx-4" href="#">
+						<i class="fa-brands fa-facebook-f"></i>
+					</a>
+					<a href="#">
+						<i class="fa-brands fa-youtube"></i>
+					</a>
+				</div>
+			</div>
+		</aside>
+
+		<div class="my-container">
+			<nav class="d-flex justify-content-between align-items-center py-3">
+				<div>
+					<i class="fa-solid fa-bars d-md-none menu-icon"></i>
+					<a class="site-logo" href="#">3legant</a>
+				</div>
+				<ul class="mb-0 d-md-flex d-none align-items-center">
+					<li class=" me-4">
+						<a class="nav-link active" aria-current="page" href="index.html">Home</a>
+					</li>
+					<li class=" me-4">
+						<a class="nav-link " aria-current="page" href="shop.html">Shop</a>
+					</li>
+					<li class=" me-4">
+						<a class="nav-link " aria-current="page" href="blog.html">Blog</a>
+					</li>
+					<li class=" me-4">
+						<a class="nav-link " aria-current="page" href="contact.html">Contact Us</a>
+					</li>
+				</ul>
+
+				<form class="d-flex align-items-center position-relative" role="search">
+					<div class="d-md-flex d-none search-box flex-column mx-3 position-absolute">
+						<span class="mb-2">Search Box</span>
+						<div class="d-flex align-items-center rounded-2 px-2">
+							<a class="" href="#">
+								<img src="assets/images/proj_2/search_icon.svg" alt="search_icon">
+							</a>
+							<input class="form-control me-2 border-0" placeholder="Search" type="search" required aria-label="Search">
+						</div>
+					</div>
+					<img class="mx-3 d-none d-md-inline-block open-search" src="assets/images/proj_2/search_icon.svg" alt="search_icon">
+					<a class="d-md-flex d-none align-items-center justify-content-center profile-link" href="profile.html">
+						<span class="material-symbols-outlined">account_circle</span>
+					</a>
+					<span class="my-badge  mx-3 me-4 position-relative" href="#">
+						<img src="assets/images/proj_2/card_icon.svg" alt="card_icon">
+						<span class="position-absolute rounded-circle d-flex align-items-center justify-content-center f-inter">0</span>
+					</span>
+				</form>
+
+			</nav>
+		</div>
+
+		<aside class="cart-aside position-fixed p-4 d-flex flex-column">
+			<div class="title-close d-flex align-items-center justify-content-between mb-4 ">
+				<span>Cart</span>
+				<span class="material-symbols-outlined close-icon ms-2">close</span>
+			</div>
+			<div class="cart-items ">
+			</div>
+			<div class="aside-footer mt-auto d-flex flex-column">
+				<div class="d-flex align-items-center justify-content-between py-3">
+					<span>Subtotal</span>
+					<span>$0</span>
+				</div>
+				<div class="d-flex align-items-center justify-content-between py-3">
+					<span>Total</span>
+					<span>$0</span>
+				</div>
+				<a href="cart.html?step_is=checkout" class="custom-btn d-block my-3">Checkout</a>
+				<a class="pb-1 align-self-center" href="cart.html">View Cart</a>
+			</div>
+		</aside>
+
+	</header>
+
+	<main class="cart-page">
+		<div class="my-container statec-content">
+			<h1 class="text-center">Cart</h1>
+			<div class="pay-steps d-flex overflow-auto mx-auto mb-5">
+				<div class="step cart-s d-flex align-items-center py-4 active">
+					<span class="d-flex align-items-center justify-content-center rounded-circle">1</span><h3 class="mx-3 my-0">Shopping cart</h3>
+				</div>
+				<div class="step check-s d-flex align-items-center py-4 mx-4">
+					<span class="d-flex align-items-center justify-content-center rounded-circle">2</span><h3 class="mx-3 my-0">Checkout details</h3>
+				</div>
+				<div class="step d-flex align-items-center py-4 complete-cart">
+					<span class="d-flex align-items-center justify-content-center rounded-circle">3</span><h3 class="mx-3 my-0">Order complete</h3>
+				</div>
+			</div>
+		</div>
+		<div class="my-container  variable-content">
+			<div class="row main-cart-view pb-5 pt-2 mx-0 ">
+				<div class="order-info col-12 col-lg-8 px-lg-4 pe-lg-5 px-0">
+					<div class="info-title row pb-4 mx-0">
+						<div class="col-12 col-sm-6 px-0 ">Product</div>
+						<div class="col-2 px-0 justify-content-center d-none d-sm-flex">Quantity</div>
+						<div class="col-2 px-0 justify-content-center d-none d-sm-flex">Price</div>
+						<div class="col-2 px-0 justify-content-end d-none d-sm-flex">Subtotal</div>
+					</div>
+					<div class="orders-details f-inter ">
+						
+					</div>
+					<div class="coupon py-3 py-lg-5">
+						<h4>Have a coupon?</h4>
+						<p>Add your code for an instant cart discount</p>
+						<div class="d-flex align-items-center justify-content-between px-3 py-2">
+							<div class=" d-flex align-items-center">
+								<svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M20.0181 12.8356L19.7727 13.5444H19.7727L20.0181 12.8356ZM20.0181 7.16437L20.2635 7.8731V7.8731L20.0181 7.16437ZM1.98189 12.8356L2.22727 13.5444H2.22727L1.98189 12.8356ZM1.98189 7.16437L1.73652 7.8731L1.73652 7.8731L1.98189 7.16437ZM14.5303 7.53033C14.8232 7.23744 14.8232 6.76256 14.5303 6.46967C14.2374 6.17678 13.7626 6.17678 13.4697 6.46967L14.5303 7.53033ZM7.46967 12.4697C7.17678 12.7626 7.17678 13.2374 7.46967 13.5303C7.76256 13.8232 8.23744 13.8232 8.53033 13.5303L7.46967 12.4697ZM5 18.25C3.20507 18.25 1.75 16.7949 1.75 15H0.25C0.25 17.6234 2.37665 19.75 5 19.75V18.25ZM20.25 15C20.25 16.7949 18.7949 18.25 17 18.25V19.75C19.6234 19.75 21.75 17.6234 21.75 15H20.25ZM17 1.75C18.7949 1.75 20.25 3.20507 20.25 5H21.75C21.75 2.37665 19.6234 0.25 17 0.25V1.75ZM5 0.25C2.37665 0.25 0.25 2.37665 0.25 5H1.75C1.75 3.20507 3.20507 1.75 5 1.75V0.25ZM20.2635 12.1269C19.3815 11.8216 18.75 10.9836 18.75 10H17.25C17.25 11.6424 18.3054 13.0363 19.7727 13.5444L20.2635 12.1269ZM18.75 10C18.75 9.01644 19.3815 8.17844 20.2635 7.8731L19.7727 6.45565C18.3054 6.96367 17.25 8.35761 17.25 10H18.75ZM3.25 10C3.25 10.9836 2.61845 11.8216 1.73652 12.1269L2.22727 13.5444C3.69461 13.0363 4.75 11.6424 4.75 10H3.25ZM1.73652 7.8731C2.61845 8.17844 3.25 9.01644 3.25 10H4.75C4.75 8.35762 3.69462 6.96367 2.22727 6.45565L1.73652 7.8731ZM21.75 6V5H20.25V6H21.75ZM20.25 14V15H21.75V14H20.25ZM0.25 14V15H1.75V14H0.25ZM1.75 6V5H0.25V6H1.75ZM17 18.25H5V19.75H17V18.25ZM17 0.25H5V1.75H17V0.25ZM1.73652 12.1269C1.05785 12.3619 0.25 12.9975 0.25 14H1.75C1.75 13.9441 1.77081 13.8708 1.85172 13.7813C1.9366 13.6873 2.06974 13.5989 2.22727 13.5444L1.73652 12.1269ZM20.2635 7.8731C20.9422 7.63813 21.75 7.00246 21.75 6H20.25C20.25 6.05587 20.2292 6.12917 20.1483 6.21871C20.0634 6.31265 19.9303 6.40111 19.7727 6.45565L20.2635 7.8731ZM2.22727 6.45565C2.06974 6.40111 1.9366 6.31265 1.85172 6.21871C1.77081 6.12917 1.75 6.05587 1.75 6H0.25C0.25 7.00246 1.05785 7.63813 1.73652 7.8731L2.22727 6.45565ZM19.7727 13.5444C19.9303 13.5989 20.0634 13.6873 20.1483 13.7813C20.2292 13.8708 20.25 13.9441 20.25 14H21.75C21.75 12.9975 20.9422 12.3619 20.2635 12.1269L19.7727 13.5444ZM8.25 7C8.25 7.13807 8.13807 7.25 8 7.25V8.75C8.9665 8.75 9.75 7.9665 9.75 7H8.25ZM8 7.25C7.86193 7.25 7.75 7.13807 7.75 7H6.25C6.25 7.9665 7.0335 8.75 8 8.75V7.25ZM7.75 7C7.75 6.86193 7.86193 6.75 8 6.75V5.25C7.0335 5.25 6.25 6.0335 6.25 7H7.75ZM8 6.75C8.13807 6.75 8.25 6.86193 8.25 7H9.75C9.75 6.0335 8.9665 5.25 8 5.25V6.75ZM14.25 13C14.25 13.1381 14.1381 13.25 14 13.25V14.75C14.9665 14.75 15.75 13.9665 15.75 13H14.25ZM14 13.25C13.8619 13.25 13.75 13.1381 13.75 13H12.25C12.25 13.9665 13.0335 14.75 14 14.75V13.25ZM13.75 13C13.75 12.8619 13.8619 12.75 14 12.75V11.25C13.0335 11.25 12.25 12.0335 12.25 13H13.75ZM14 12.75C14.1381 12.75 14.25 12.8619 14.25 13H15.75C15.75 12.0335 14.9665 11.25 14 11.25V12.75ZM13.4697 6.46967L7.46967 12.4697L8.53033 13.5303L14.5303 7.53033L13.4697 6.46967Z" fill="#6C7275"/>
+								</svg>
+								<input class="mx-2 border-0 coupon-inp" type="text" placeholder="Coupon Code"/>
+							</div>
+							<button class="border-0 coupon-apply">Apply</button>	
+						</div>
+					</div>
+				</div>
+				<div class="cart-summary col-12 col-lg-4 p-4 rounded-2">
+					<h3 class="mb-3">Cart summary</h3>
+					<ul class="p-0 f-inter radios-father">
+						<li class="d-flex align-items-center  p-2 justify-content-between rounded-1">
+							<div>
+								<input data-plane="0" id="free-radio" type="radio" name="shipping">
+								<label class="mx-2" for="free-radio">Free shipping</label>
+							</div>
+							<span class="shipping-plan">$0.00</span>
+						</li>
+						<li class="d-flex align-items-center  p-2 my-2 justify-content-between rounded-1">
+							<div>
+								<input data-plane="6" id="express-radio" type="radio" name="shipping">
+								<label class="mx-2" for="express-radio">Express shipping</label>
+							</div>
+							<span class="shipping-plan">$6.00</span>
+						</li>
+						<li class="d-flex align-items-center  p-2 justify-content-between rounded-1">
+							<div>
+								<input data-plane="10" id="pick-up-radio" type="radio" name="shipping">
+								<label class="mx-2" for="pick-up-radio">Pick Up</label>
+							</div>
+							<span class="shipping-plan">$10.00</span>
+						</li>
+					</ul>
+					<ul class="px-0 py-3 total-info">
+						<li class="d-flex justify-content-between align-items-center py-2"><span>Subtotal</span>
+							 <span class="sub-total">$113.00</span>
+							</li>
+						<li class="d-flex justify-content-between align-items-center py-2"><span>Total</span>
+							<span class="total-all">$113.00</span>
+						</li>
+					</ul>
+					<a href="?step_is=checkout" class="custom-btn d-block to-checkout">Checkout</a>
+				</div>
+			</div>
+			<div class="row delivery-info pb-5 pt-2 mx-0 d-none">
+				<div class="col-12 col-lg-7 pe-lg-5 px-0">
+					<div class="contact-info p-4 rounded-2 mb-4">
+						<h3 class="my-3">Contact Information</h3>
+						<div class="d-flex tow-input-container align-items-center justify-content-between">
+							<div class="d-flex flex-column py-2 f-inter">
+								<label class="mb-2">FIRST NAME *</label>
+								<input data-info="fname" class="py-2 px-3 rounded-2" type="text" placeholder="First name">
+							</div>
+							<div class="d-flex flex-column py-2 f-inter">
+								<label class="mb-2">LAST NAME *</label>
+								<input data-info="lname" class="py-2 px-3 rounded-2 " type="text" placeholder="Last name">
+							</div>
+						</div>
+						<div class="d-flex flex-column py-2 f-inter">
+							<label class="mb-2">PHONE NUMBER *</label>
+							<input data-info="phone" class="py-2 px-3 rounded-2" type="text" placeholder="Phone number">
+						</div>
+						<div class="d-flex flex-column py-2 f-inter">
+							<label class="mb-2">EMAIL ADDRESS *</label>
+							<input data-info="emailAddress" class="py-2 px-3 rounded-2" type="email" placeholder="Email address">
+						</div>
+					</div>
+
+					<div class="shipping-address p-4 rounded-2 mb-4">
+						<h3 class="my-3">Shipping Address</h3>
+						<div class="d-flex flex-column py-2 f-inter">
+							<label class="mb-2">Street Address*</label>
+							<input data-info="address" class="py-2 px-3 rounded-2" type="text" placeholder="Stress Address">
+						</div>
+						<div class="d-flex flex-column py-2 f-inter">
+							<label class="mb-2">Country*</label>
+							<select data-info="country" class="py-2 px-3 rounded-2">
+								<option value="0">Country</option>
+								<option value="syria">Syria</option>
+								<option value="usa">USA</option>
+								<option value="uk">UK</option>
+							</select>
+						</div>
+						<div class="d-flex flex-column py-2 f-inter">
+							<label class="mb-2">Town / City*</label>
+							<input data-info="city" class="py-2 px-3 rounded-2" type="email" placeholder="Town / City">
+						</div>
+						<div class="d-flex tow-input-container align-items-center justify-content-between">
+							<div class="d-flex flex-column py-2 f-inter">
+								<label class="mb-2">State*</label>
+								<input data-info="state" class="py-2 px-3 rounded-2" type="text" placeholder="State">
+							</div>
+							<div class="d-flex flex-column py-2 f-inter">
+								<label class="mb-2">Zip Code*</label>
+								<input data-info="zip" class="py-2 px-3 rounded-2 " type="text" placeholder="Zip Code">
+							</div>
+						</div>
+						<div class="my-2"><input type="checkbox"> <span class="mx-2">Use a different billing address (optional)</span></div>
+					</div>
+					<div class="payment-method py-4 px-3 rounded-2 mb-4">
+						<h3 class="my-3">Payment method</h3>
+						<div class="pb-4 pt-3 top-content">
+							<div data-pay="card" class="d-flex p-2 rounded-2 mb-3 f-inter justify-content-between align-items-center bordered-div payment-way">
+								<div>
+									<input data-pay="card" class="" name="payment" type="radio">
+									<label class="mx-2">Pay by Card Credit</label>
+								</div>
+								<img src="assets/images/proj_2/featuers-money.svg" alt="Credit Card">
+							</div>
+							<div data-pay="paypal" class="d-flex p-2 rounded-2 f-inter justify-content-between align-items-center bordered-div payment-way">
+								<div>
+									<input data-pay="paypal" class="" name="payment" type="radio">
+									<label class="mx-2">Paypal</label>
+								</div>
+							</div>
+						</div>
+
+						<div class="changed-content pt-3">
+						</div>
+
+					</div>
+				</div>
+
+				<div class="col-12 col-lg-5 order-summary  px-0">
+					<div class="p-4 rounded-2">
+						<h3 class="mb-3">Order Summary</h3>
+						<div class="orders f-inter">
+							
+						</div>
+						<div class="coupon-field py-4 d-flex gap-3">
+							<input class="p-3 rounded-3" type="text" placeholder="coupon code">
+							<button class="rounded-3 border-0 px-3">Apply</button>
+						</div>
+						<ul class="px-0 to-show-coupon-result">
+							<li class="d-flex align-items-center justify-content-between py-3 show-coupon">
+								<div class="d-flex align-items-center">
+									<svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M20.0181 12.8356L19.7727 13.5444H19.7727L20.0181 12.8356ZM20.0181 7.16437L20.2635 7.8731V7.8731L20.0181 7.16437ZM1.98189 12.8356L2.22727 13.5444H2.22727L1.98189 12.8356ZM1.98189 7.16437L1.73652 7.8731L1.73652 7.8731L1.98189 7.16437ZM14.5303 7.53033C14.8232 7.23744 14.8232 6.76256 14.5303 6.46967C14.2374 6.17678 13.7626 6.17678 13.4697 6.46967L14.5303 7.53033ZM7.46967 12.4697C7.17678 12.7626 7.17678 13.2374 7.46967 13.5303C7.76256 13.8232 8.23744 13.8232 8.53033 13.5303L7.46967 12.4697ZM5 18.25C3.20507 18.25 1.75 16.7949 1.75 15H0.25C0.25 17.6234 2.37665 19.75 5 19.75V18.25ZM20.25 15C20.25 16.7949 18.7949 18.25 17 18.25V19.75C19.6234 19.75 21.75 17.6234 21.75 15H20.25ZM17 1.75C18.7949 1.75 20.25 3.20507 20.25 5H21.75C21.75 2.37665 19.6234 0.25 17 0.25V1.75ZM5 0.25C2.37665 0.25 0.25 2.37665 0.25 5H1.75C1.75 3.20507 3.20507 1.75 5 1.75V0.25ZM20.2635 12.1269C19.3815 11.8216 18.75 10.9836 18.75 10H17.25C17.25 11.6424 18.3054 13.0363 19.7727 13.5444L20.2635 12.1269ZM18.75 10C18.75 9.01644 19.3815 8.17844 20.2635 7.8731L19.7727 6.45565C18.3054 6.96367 17.25 8.35761 17.25 10H18.75ZM3.25 10C3.25 10.9836 2.61845 11.8216 1.73652 12.1269L2.22727 13.5444C3.69461 13.0363 4.75 11.6424 4.75 10H3.25ZM1.73652 7.8731C2.61845 8.17844 3.25 9.01644 3.25 10H4.75C4.75 8.35762 3.69462 6.96367 2.22727 6.45565L1.73652 7.8731ZM21.75 6V5H20.25V6H21.75ZM20.25 14V15H21.75V14H20.25ZM0.25 14V15H1.75V14H0.25ZM1.75 6V5H0.25V6H1.75ZM17 18.25H5V19.75H17V18.25ZM17 0.25H5V1.75H17V0.25ZM1.73652 12.1269C1.05785 12.3619 0.25 12.9975 0.25 14H1.75C1.75 13.9441 1.77081 13.8708 1.85172 13.7813C1.9366 13.6873 2.06974 13.5989 2.22727 13.5444L1.73652 12.1269ZM20.2635 7.8731C20.9422 7.63813 21.75 7.00246 21.75 6H20.25C20.25 6.05587 20.2292 6.12917 20.1483 6.21871C20.0634 6.31265 19.9303 6.40111 19.7727 6.45565L20.2635 7.8731ZM2.22727 6.45565C2.06974 6.40111 1.9366 6.31265 1.85172 6.21871C1.77081 6.12917 1.75 6.05587 1.75 6H0.25C0.25 7.00246 1.05785 7.63813 1.73652 7.8731L2.22727 6.45565ZM19.7727 13.5444C19.9303 13.5989 20.0634 13.6873 20.1483 13.7813C20.2292 13.8708 20.25 13.9441 20.25 14H21.75C21.75 12.9975 20.9422 12.3619 20.2635 12.1269L19.7727 13.5444ZM8.25 7C8.25 7.13807 8.13807 7.25 8 7.25V8.75C8.9665 8.75 9.75 7.9665 9.75 7H8.25ZM8 7.25C7.86193 7.25 7.75 7.13807 7.75 7H6.25C6.25 7.9665 7.0335 8.75 8 8.75V7.25ZM7.75 7C7.75 6.86193 7.86193 6.75 8 6.75V5.25C7.0335 5.25 6.25 6.0335 6.25 7H7.75ZM8 6.75C8.13807 6.75 8.25 6.86193 8.25 7H9.75C9.75 6.0335 8.9665 5.25 8 5.25V6.75ZM14.25 13C14.25 13.1381 14.1381 13.25 14 13.25V14.75C14.9665 14.75 15.75 13.9665 15.75 13H14.25ZM14 13.25C13.8619 13.25 13.75 13.1381 13.75 13H12.25C12.25 13.9665 13.0335 14.75 14 14.75V13.25ZM13.75 13C13.75 12.8619 13.8619 12.75 14 12.75V11.25C13.0335 11.25 12.25 12.0335 12.25 13H13.75ZM14 12.75C14.1381 12.75 14.25 12.8619 14.25 13H15.75C15.75 12.0335 14.9665 11.25 14 11.25V12.75ZM13.4697 6.46967L7.46967 12.4697L8.53033 13.5303L14.5303 7.53033L13.4697 6.46967Z" fill="#141718"/>
+									</svg>
+									<span class="mx-3">no coupon</span>
+								</div>
+								<span></span>
+							</li>
+							<li class="d-flex align-items-center justify-content-between py-3 show-shipping">
+								<span>Shipping</span>
+								<span></span>
+							</li>
+							<li class="d-flex align-items-center justify-content-between py-3 show_sub_total">
+								<span>Subtotal</span>
+								<span>$99.00</span>
+							</li>
+							<li class="d-flex align-items-center justify-content-between py-3 show_full_total">
+								<span>Total</span>
+								<span>$99.00</span>
+							</li>
+						</ul>
+					</div>
+					<a  href="#" class="custom-btn place_order d-block mt-4">Place Order</a>
+					<div class="all_errors_show border-0"></div>
+				</div>
+			</div>
+			<div class="complete-pay mx-auto rounded-3 p-5 px-3 px-sm-5 my-5 d-none">
+				<h3 class="text-md-center">Thank you! 🎉</h3>
+				<h2 class="text-md-center mb-5 mt-3">Your order has been received</h2>
+				<div class="user-prod f-inter d-flex justify-content-between align-items-center flex-wrap">
+					
+				</div>
+				<ul class="px-0 mx-auto mb-5 mt-4 f-inter show-order-finaly">
+					<li class="d-flex align-items-sm-center py-3 py-sm-0 pb-sm-2 flex-column flex-sm-row ">
+						<span class="mb-2 mb-sm-0">Order code:</span> <span class="show-order-id"></span>
+					</li>
+					<li class="d-flex align-items-sm-center py-3 py-sm-0 pb-sm-2 flex-column flex-sm-row">
+						<span class="mb-2 mb-sm-0">Date:</span> <span class="show-date"></span>
+					</li>
+					<li class="d-flex align-items-sm-center py-3 py-sm-0 pb-sm-2 flex-column flex-sm-row">
+						<span class="mb-2 mb-sm-0">Total:</span> <span class="show-total-cost"></span>
+					</li>
+					<li class="d-flex align-items-sm-center py-3 py-sm-0 pb-sm-2 flex-column flex-sm-row">
+						<span class="mb-2 mb-sm-0">Payment method:</span> <span class="show-pay-method"></span>
+					</li>
+				</ul>
+				<a href="profile.html" class="custom-btn d-block mx-auto">Purchase history</a>
+			</div>
+		</div>
+	</main>	
+
+	<footer>
+		<div class="my-container py-5">
+			<div class="d-flex align-items-center py-5 flex-column flex-lg-row">
+				<a class="me-lg-5 pe-lg-5 logo-footer position-relative" href="#">3legant</a> 
+				<span class="my-4 my-lg-0">Gift & Decoration Store</span>
+				<ul class="d-flex ms-lg-auto px-0 mb-0 flex-column flex-lg-row align-items-center">
+					<li class="my-4"><a href="index.html">Home</a></li>
+					<li class="mx-lg-5 my-lg-0"><a href="shop.html">Shop</a></li>
+					<li class="me-lg-5 my-4 my-lg-0"><a href="blog.html">Blog</a></li>
+					<li><a href="contact.html">Contact Us</a></li>
+				</ul>
+			</div>
+			<div class="d-flex align-items-center py-3 flex-column flex-lg-row flex-column-reverse">
+				<span>Copyright © 2023 3legant. All rights reserved</span>
+				<div class="my-4 my-lg-0">
+					<a class="mx-4" href="#">Privacy Policy</a>
+					<a href="#">Terms of Use</a>
+				</div>
+				<div class="social-icons ms-lg-auto">
+					<a href="#">
+						<i class="fa-brands fa-instagram"></i>
+					</a>
+					<a class="mx-4" href="#">
+						<i class="fa-brands fa-facebook-f"></i>
+					</a>
+					<a href="#">
+						<i class="fa-brands fa-youtube"></i>
+					</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+	
+	
+	
+	
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+	
+	<script src="assets/js/main.js"></script>
+	<script src="assets/js/cart.js"></script>
+
+</body>
+</html>
